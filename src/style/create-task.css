@@ -1,0 +1,26 @@
+.create-task-content {
+    display: flex;
+    justify-content: center;
+    height: 2rem;
+    width: 100%;
+    margin-top: 2rem;
+}
+
+.create-task-content input {
+    width: 30%;
+    border-radius: .4rem 0 0 .4rem;
+    border: none;
+    padding: 0 .8rem;
+}
+
+.create-task-content input:focus {
+    outline: none !important;
+    border: 2px solid #6CB4EE ;
+}
+
+.create-task-content button {
+    padding: 0 .8rem;
+    border-radius: 0 .4rem .4rem 0;
+    border: none;
+    background-color: #6CB4EE;
+}

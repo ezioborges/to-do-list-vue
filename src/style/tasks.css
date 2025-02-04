@@ -1,0 +1,26 @@
+.tasks-created-content {
+    width: 60%;
+    margin-top: 2rem;
+}
+
+.to-do-item {
+    width: 30%;
+    height: 6rem;
+    border-radius: .5rem;
+    background-color: #FF3800;
+    display: flex;
+    color: #fff;
+}
+
+.border-item {
+    width: 3%;
+    background-color: #a12402;
+    border-radius: .4rem 0 0 .4rem;
+}
+
+.item-desc {
+    width: 100%;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+}

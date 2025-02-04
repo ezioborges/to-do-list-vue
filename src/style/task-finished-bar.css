@@ -1,0 +1,20 @@
+.tasks-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    color: #fff;
+}
+
+.tasks-title {
+    font-size: 1.8rem;
+}
+
+.tasks-bar {
+    border: 1px solid #fff;
+    border-radius: .3rem;
+    display: flex;
+    justify-content: center;
+    margin-top: .5rem;
+    width: 80%;
+}
