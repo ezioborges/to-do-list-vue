@@ -7,7 +7,7 @@ import Tasks from './components/Tasks.vue';
 
 <template>
   <div class="container">
-    <TaskFinishedBar :tasks="tasks" :tasksProgress="tasksProgress" />
+    <TaskFinishedBar :tasks="tasks" :tasksProgress="tasksProgress" :progressBar="progressBar" />
     <CreateTask :newTask="newTask" :generateTask="generateTask" />
     <Tasks :tasksArray="tasksArray" :deleteTask="deleteTask" />
   </div>
@@ -42,6 +42,13 @@ import Tasks from './components/Tasks.vue';
 
       deleteTask(index) {
         this.tasksArray = this.tasksArray.filter((e) => e.id !== index)             
+      },
+
+      progressBar() {
+        // primeiro vou ter que achar a quantidade de tasks que estão com resolved === true (guardar numa variável)
+        // pegar a quantidade total de elementos no array
+
+        // finalizar com o calculo de porcentagem (final - inicial * 100)
       }
     }
   }
