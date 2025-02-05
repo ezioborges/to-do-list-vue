@@ -9,7 +9,7 @@ import Tasks from './components/Tasks.vue';
   <div class="container">
     <TaskFinishedBar :tasks="tasks" :tasksProgress="tasksProgress" />
     <CreateTask :newTask="newTask" :generateTask="generateTask" />
-    <Tasks :tasksArray="tasksArray" />
+    <Tasks :tasksArray="tasksArray" :deleteTask="deleteTask" />
   </div>
 </template>
 
@@ -26,7 +26,22 @@ import Tasks from './components/Tasks.vue';
     },
     methods: {
       generateTask(task){
-       this.tasksArray.push(task)
+        const newTask = {
+          id: this.uid(),
+          resolved: false,
+          task: task
+        }
+
+       this.tasksArray.push(newTask)
+
+      },
+
+      uid() {
+        return Date.now().toString(36) + Math.random().toString(36).substr(2);
+      }, 
+
+      deleteTask(index) {
+        this.tasksArray = this.tasksArray.filter((e) => e.id !== index)             
       }
     }
   }
