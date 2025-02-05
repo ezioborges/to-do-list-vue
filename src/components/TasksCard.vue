@@ -11,7 +11,7 @@
                 <div
                   class="btn-task"
                   :class="[task.resolved ? 'btn-done' : 'btn-new']"
-                  @click="deleteTask(task.id)"
+                  @click.stop="deleteTask(task.id)"
                 >
                     <img src="../img/close.svg" alt="X">
                 </div>
