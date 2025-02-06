@@ -7,7 +7,8 @@
             <div :class="[task.resolved ? 'border-item-done' : 'border-item-new']"></div>
             <div 
                 class="item-desc"
-            >   
+            > 
+            <div class="delete-btn">
                 <div
                   class="btn-task"
                   :class="[task.resolved ? 'btn-done' : 'btn-new']"
@@ -15,7 +16,10 @@
                 >
                     <img src="../img/close.svg" alt="X">
                 </div>
+            </div>
+                <div class="description">
                     <p :class="[task.resolved ? 'item-desc-done' : 'item-desc-new']">{{task.task}}</p>
+                </div>
             </div>
         </div>
 </template>

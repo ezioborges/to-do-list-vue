@@ -20,6 +20,7 @@
 .task-bg {
     background-color: #17B169;
     width: 0;
+    transition: 2s;
 }
 
 .barPercent {

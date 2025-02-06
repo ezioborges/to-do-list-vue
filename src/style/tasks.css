@@ -44,8 +44,7 @@
 .item-desc {
     width: 100%;
     display: flex;
-    justify-content: center; 
-    align-items: center;
+    flex-direction: column;
 }
 
 .item-desc-new {
@@ -59,7 +58,6 @@
 }
 
 .btn-task {
-    transform: translate(7.2rem, -290%);
     border-radius: 50%;
     width: .8rem;
     height: .8rem;
@@ -84,4 +82,17 @@
 
 .btn-new {
     background-color: #a12402;
+}
+
+.delete-btn {
+    display: flex;
+    justify-content: flex-end;
+    padding: .4rem .4rem 0 0;
+}
+
+.description {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

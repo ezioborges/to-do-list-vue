@@ -50,7 +50,7 @@ import Tasks from './components/Tasks.vue';
         const calcTaskDone = (taskDone.length / this.tasksArray.length) * 100;
         console.log("🚀 ~ progressBar ~ taskDone:", calcTaskDone)
 
-        return calcTaskDone
+        return Math.floor(calcTaskDone);
       }
     }
   }
