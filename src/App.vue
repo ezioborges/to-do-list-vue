@@ -19,7 +19,7 @@ import Tasks from './components/Tasks.vue';
     data() {
       return {
         tasks: 'Tarefas',
-        tasksProgress: 100,
+        tasksProgress: 0,
         newTask: '',
         tasksArray: []
       }
@@ -46,9 +46,11 @@ import Tasks from './components/Tasks.vue';
 
       progressBar() {
         // primeiro vou ter que achar a quantidade de tasks que estão com resolved === true (guardar numa variável)
-        // pegar a quantidade total de elementos no array
+        const taskDone = this.tasksArray.filter((e) => e.resolved === true);
+        const calcTaskDone = (taskDone.length / this.tasksArray.length) * 100;
+        console.log("🚀 ~ progressBar ~ taskDone:", calcTaskDone)
 
-        // finalizar com o calculo de porcentagem (final - inicial * 100)
+        return calcTaskDone
       }
     }
   }
